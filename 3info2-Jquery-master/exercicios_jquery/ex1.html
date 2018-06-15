@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .azul{
+            color: blue;
+
+        }
+        .vermelho{
+            color: red;
+        }
+        .importante{
+            font-weight: bold;
+        }
+        .roxo{
+            color: deeppink;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#bt1").click(function () {
+                var txt = $("header"). text();
+                alert(txt)
+            });
+
+            $("#bt2").click(function () {
+                var txt = $("header"). html();
+                alert(txt)
+            });
+
+            $("#bt3").click(function () {
+                var txt = $("input"). val();
+                alert(txt)
+            });
+
+            $("#bt4").click(function () {
+                var txt = $("a"). attr("href");
+                alert(txt)
+            });
+
+            $("#bt5").click(function () {
+                $("#paragrafo1"). text( "Novo texto do parágrafo");
+            });
+
+            $("#bt6").click(function () {
+                $("#paragrafo2"). html( "<b>Novo texto do parágrafo</b>");
+            });
+
+            $("#bt7").click(function () {
+               var txt = $("input"). val("Novo valor do input");
+               txt();
+            });
+
+            $("#bt8").click(function () {
+                $("a") .attr ("http://araquari.ifc.edu.br/");
+
+            });
+            $("#bt9").click(function () {
+                $("img").attr("src","apagada.jpg");
+
+            });
+
+            $("#bt10").click(function () {
+                $("ol").append("4.Quarto");
+
+            });
+            $("#bt11").click(function () {
+                $("ol").prepend("0.Zero");
+
+            });
+            $("#bt12").click(function () {
+                $("#paragrafo1").prepend("3INFO2");
+
+            });
+
+            $("#bt13").click(function () {
+                $("#paragrafo2").append("3INFO2");
+
+            });
+            $("#bt14").click(function () {
+                $("header").remove("");
+
+            });
+            $("#bt15").click(function () {
+                $("#conteudo-principal").empty("");
+
+            });
+            $("#bt16").click(function () {
+                $("p").remove("#paragrafo1, #paragrafo2");
+
+            });
+
+            $("#bt17").click(function () {
+                $("p").remove("#paragrafo1, #paragrafo2, .outro");
+
+            });
+
+            $("#bt18").click(function () {
+                $("#paragrafo1").addClass("azul");
+
+            });
+            $("#bt19").click(function () {
+                $("#paragrafo2").addClass("vermelho", "importante");
+            });
+            $("#bt20").click(function () {
+                $("#paragrafo1").removeClass("azul");
+            });
+
+            $("#bt21").click(function () {
+                $("#paragrafo2").toggleClass("importante");
+            });
+
+            $("#bt22").click(function () {
+                $("#paragrafo3").css("background-color", "purple");
+            });
+            $("#bt23").click(function () {
+                $("header").css("border","dotted");
+            });
+            $("#bt24").click(function () {
+                var txt = $("header").css("background-color", "purple");
+                alert(txt)
+            });
+            $("#bt25").click(function () {
+                $("#paragrafo2").css({"background-color": "purple", "color": "white", "font-size": "25px", "padding": "15px"});
+            });
+            $("#bt26").click(function () {
+                var txt = $("input").css("padding");
+                alert(txt)
+            });
+            $("#bt27").click(function () {
+                var txt = $("#paragrafo1").css("height");
+                alert(txt)
+            });
+            $("#bt28").click(function () {
+                $("#paragrafo3").parent().attr("style","border-style: dotted;");
+            });
+            $("#bt29").click(function () {
+                $("span").parents().attr("style","border-style: dotted;");
+            });
+            $("#bt30").click(function () {
+                $("h1").children().attr("style","border-style: dotted;");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Página de exercícios - <span class="destaque">jQuery</span></h1>
+    </header>
+    <section id="conteudo-principal">
+        <img src="acesa.jpg" width="100px">
+        <p class="texto" id="paragrafo1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores corporis deserunt dolor dolorem harum hic, illum iste, labore minima necessitatibus sed similique, ut. Expedita impedit ipsa iure nihil nulla.
+        </p>
+        <input type="text" value="caixa de entrada de texto">
+        <ol>
+            <li>Primeiro</li>
+            <li>Segundo</li>
+            <li>Terceiro</li>
+        </ol>
+
+        <p class="texto" id="paragrafo2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores corporis deserunt dolor dolorem harum hic, illum iste, labore minima necessitatibus sed similique, ut. Expedita impedit ipsa iure nihil nulla.
+        </p>
+
+        <p class="outro" id="paragrafo3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda cum, cupiditate deleniti eaque iusto magnam quae quos sunt suscipit? Asperiores ducimus earum, necessitatibus nisi perspiciatis praesentium quia sunt temporibus.
+        </p>
+        <a href="http://ifc.edu.br" id="link1">IFC</a> <br>
+        <button id="bt1">Questao 1</button>
+        <button id="bt2">Questao 2</button>
+        <button id="bt3">Questao 3</button>
+        <button id="bt4">Questao 4</button>
+        <button id="bt5">Questao 5</button>
+        <button id="bt6">Questao 6</button>
+        <button id="bt7">Questao 7</button>
+        <button id="bt8">Questao 8</button>
+        <button id="bt9">Questao 9</button>
+        <button id="bt10">Questao 10</button>
+        <button id="bt11">Questao 11</button>
+        <button id="bt12">Questao 12</button>
+        <button id="bt13">Questao 13</button>
+        <button id="bt14">Questao 14</button>
+        <button id="bt15">Questao 15</button>
+        <button id="bt16">Questao 16</button>
+        <button id="bt17">Questao 17</button>
+        <button id="bt18">Questao 18</button>
+        <button id="bt19">Questao 19</button>
+        <button id="bt20">Questao 20</button>
+        <button id="bt21">Questao 21</button>
+        <button id="bt22">Questao 22</button>
+        <button id="bt23">Questao 23</button>
+        <button id="bt24">Questao 24</button>
+        <button id="bt25">Questao 25</button>
+        <button id="bt26">Questao 26</button>
+        <button id="bt27">Questao 27</button>
+        <button id="bt28">Questao 28</button>
+        <button id="bt29">Questao 29</button>
+        <button id="bt30">Questao 30</button>
+    </section>
+    <footer>
+        Desenvolvido por <span class="destaque">Rafael</span>.
+    </footer>
+</body>
+</html>

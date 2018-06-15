@@ -1,0 +1,38 @@
+
+
+#abas{
+
+    border: 1px solid black;
+}
+
+#conteudos{
+    border: 1px solid black;
+
+}
+.selecionado{
+
+    background-color: skyblue;
+}
+
+#abas ul {
+
+    display: inline;
+}
+
+#abas ul li {
+
+    display: inline-block;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.conteudo {
+
+    border: 1px solid black;
+
+}
+
+.foto-produto{
+    width: 60px;
+}
